@@ -377,7 +377,24 @@ svg {
 .skills__item::marker {
   color: var(--first-color);
 }
+. 
 
+/* Кнопка */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--first-color);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeInUp 2s ease;
+}
+
+.button:hover {
+  background: var(--first-color-alt);
+  transform: translateY(-3px);
+}
 /*=============== SERVICES ===============*/
 .services__container {
   grid-row: 2rem;
