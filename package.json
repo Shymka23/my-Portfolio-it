@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@widgetbot/crate": "^3.7.0",
+    "animejs": "^4.0.1",
+    "gsap": "^3.12.7"
+  }
+}

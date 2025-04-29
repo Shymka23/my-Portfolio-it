@@ -23,7 +23,9 @@
     <title>Yevhen Shymka</title>
   </head>
   <body>
-    <!--==================== HEADER ====================-->
+    <!-- Добавляем контейнер для частиц -->
+    <div id="particles-js"></div>
+      <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo"> Yevhen <span>Shymka</span> </a>
@@ -163,9 +165,9 @@
                 <image
                   class="home__img"
                   id="imageBlob"
-                  width="640"
-                  height="925"
-                  href="./assets/img/avatar-1.png"
+                  width="660"
+                  height="1110"
+                  href="./assets/img/avatar1.png"
                 />
               </defs>
             </svg>
@@ -248,9 +250,9 @@
                 <image
                   class="about__img"
                   id="imageBorder"
-                  width="640"
-                  height="940"
-                  href="./assets/img/avatar-2.png"
+                  width="560"
+                  height="960"
+                  href="./assets/img/avatar2.png"
                 />
               </defs>
             </svg>
@@ -258,8 +260,8 @@
         </div>
       </section>
 
-      <!--==================== SKILLS ====================-->
-<section class="skills section">
+     <!--==================== SKILLS ====================-->
+ <section class="skills section">
         <div class="skills__container container grid">
           <div class="skills__data">
             <h3 class="section__subtitle">Favorite <span>Skills</span></h3>
@@ -286,7 +288,7 @@
             </ol>
           </div>
         </div>
-      </section>
+      </section> 
 
       <!--==================== SERVICES ====================-->
       <section class="services section" id="services">
@@ -454,7 +456,6 @@ figma, adobe xd and sketch.</p>
         </span>
       </div>
     </footer>
-
     <!--========== SCROLL UP ==========-->
     <a href="#" class="scrollup" id="scroll-up">
  <i class="ri-arrow-up-double-line"></i>
@@ -467,5 +468,39 @@ figma, adobe xd and sketch.</p>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
+    <!-- Подключаем библиотеку particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      // Инициализация частиц
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#2ca87f' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5 },
+          size: { value: 3 },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'repulse' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          }
+        }
+      });
+    </script>
+    <!--=============== CUSTOM CURSOR ===============-->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
   </body>
 </html>

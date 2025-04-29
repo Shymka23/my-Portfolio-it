@@ -157,3 +157,55 @@ sr.reveal(`.about__image, .skills__content`, { origin: `right` });
 
 // Анімація для карток в секціях "services" та "projects" (з'являються справа)
 sr.reveal(`.services__card, .projects__card`, { origin: `right` });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cursor = document.querySelector(".cursor");
+  const follower = document.querySelector(".cursor-follower");
+
+  // Position cursor
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+    follower.style.left = `${e.clientX}px`;
+    follower.style.top = `${e.clientY}px`;
+  });
+
+  // Click effects
+  document.addEventListener("mousedown", () => {
+    cursor.classList.add("active");
+    follower.classList.add("active");
+  });
+
+  document.addEventListener("mouseup", () => {
+    cursor.classList.remove("active");
+    follower.classList.remove("active");
+  });
+
+  // Hover effects for all links and buttons
+  const hoverTargets = document.querySelectorAll(
+    "a, button, [data-cursor-hover]"
+  );
+  hoverTargets.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursor.classList.add("hover");
+      follower.classList.add("hover");
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover");
+      follower.classList.remove("hover");
+    });
+  });
+
+  // Hide cursor when not needed
+  document.addEventListener("mouseout", (e) => {
+    if (!e.relatedTarget) {
+      cursor.classList.add("hidden");
+      follower.classList.add("hidden");
+    }
+  });
+
+  document.addEventListener("mouseover", () => {
+    cursor.classList.remove("hidden");
+    follower.classList.remove("hidden");
+  });
+});
