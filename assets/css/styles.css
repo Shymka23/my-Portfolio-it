@@ -490,7 +490,7 @@ svg {
   bottom: 0;
 }
 /*=============== CONTACT ===============*/
-.contact__container {
+/* .contact__container {
   padding-top: 1rem;
 }
 .contact__form,
@@ -525,6 +525,126 @@ svg {
   bottom: 4.5rem;
   font-size: var(--small-font-size);
   color: var(--title-color);
+} */
+/* Основные стили остаются без изменений */
+.contact__container {
+  padding-top: 1rem;
+}
+
+.contact__form,
+.contact__group {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.contact__form {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__input {
+  padding: 1.5rem 1.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--container-color);
+  color: var(--title-color);
+  border: 2px solid var(--container-color);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.contact__input:focus {
+  outline: none;
+  border-color: var(--first-color);
+  box-shadow: 0 0 0 3px rgba(71, 123, 255, 0.2);
+}
+
+.input-label {
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.contact__input:focus + .input-label,
+.contact__input:not(:placeholder-shown) + .input-label {
+  top: 0.5rem;
+  left: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--first-color);
+}
+
+.input-error {
+  color: #ff3860;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.contact__form textarea {
+  height: 8rem;
+  resize: none;
+  margin-bottom: 1rem;
+}
+
+.contact__button {
+  justify-self: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact__button:hover {
+  transform: translateY(-2px);
+}
+
+.contact__button:active {
+  transform: translateY(0);
+}
+
+.contact__message {
+  position: absolute;
+  left: 0;
+  bottom: 4.5rem;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+/* Validation states */
+.contact__input.invalid {
+  border-color: #ff3860;
+}
+
+.contact__input.valid {
+  border-color: #09c372;
+}
+
+.contact__input.invalid + .input-label {
+  color: #ff3860;
+}
+
+.loader {
+  display: inline-block; /* Отображается в строке с текстом */
+  width: 1rem; /* Размер 16px */
+  height: 1rem; /* Размер 16px */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Серая прозрачная граница */
+  border-radius: 50%; /* Делает элемент круглым */
+  border-top-color: #fff; /* Верхняя граница белая */
+  animation: spin 1s ease-in-out infinite; /* Анимация вращения */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  } /* Полный оборот на 360 градусов */
 }
 
 /*=============== FOOTER ===============*/
@@ -934,105 +1054,3 @@ button:hover ~ .cursor-follower {
 }
 
 /*=============== SKILLS ===============*/
-.skills {
-  background-color: var(--container-color);
-}
-
-.skills__data {
-  text-align: center;
-}
-
-.skills__description {
-  margin-bottom: 2rem;
-}
-
-.skills__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.skills__card {
-  position: relative;
-  height: 300px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.skills__card-front,
-.skills__card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 1rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--body-color);
-  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.1);
-  transition: transform 0.6s ease;
-}
-
-.skills__card-front {
-  transform: rotateY(0deg);
-}
-
-.skills__card-back {
-  transform: rotateY(180deg);
-}
-
-.skills__card:hover .skills__card-front {
-  transform: rotateY(-180deg);
-}
-
-.skills__card:hover .skills__card-back {
-  transform: rotateY(0deg);
-}
-
-.skills__icon {
-  font-size: 3rem;
-  color: var(--first-color);
-  margin-bottom: 1rem;
-}
-
-.skills__card-title {
-  font-size: var(--h2-font-size);
-  color: var(--title-color);
-  margin-bottom: 1rem;
-}
-
-.skills__progress {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.skills__name {
-  display: block;
-  font-size: var(--small-font-size);
-  color: var(--text-color);
-  margin-bottom: 0.5rem;
-}
-
-.skills__bar {
-  height: 8px;
-  background-color: var(--container-color);
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 0.25rem;
-}
-
-.skills__percentage {
-  height: 100%;
-  background-color: var(--first-color);
-  border-radius: 4px;
-  transition: width 1.5s ease;
-}
-
-.skills__percentage-number {
-  font-size: var(--smaller-font-size);
-  color: var(--text-color);
-  float: right;
-}

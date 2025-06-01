@@ -47,7 +47,7 @@ const blurHeader = () => {
 window.addEventListener("scroll", blurHeader);
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById("contact-form");
+/* const contactForm = document.getElementById("contact-form");
 const contactMessage = document.getElementById("contact-message");
 
 const sendEmail = (e) => {
@@ -63,8 +63,8 @@ const sendEmail = (e) => {
     .then(
       () => {
         contactMessage.textContent = "Message sent successfully ✅";
-
-        // Очистити форму через 5 секунд
+ */
+/*   // Очистити форму через 5 секунд
         setTimeout(() => {
           contactMessage.textContent = "";
           contactForm.reset();
@@ -75,6 +75,112 @@ const sendEmail = (e) => {
         console.error("EmailJS Error:", error);
       }
     );
+};
+
+contactForm.addEventListener("submit", sendEmail); */
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
+
+// Modern validation with real-time feedback
+const validateInput = (input) => {
+  const inputGroup = input.closest(".input-group");
+  const errorElement = inputGroup.querySelector(".input-error");
+
+  if (input.validity.valid) {
+    input.classList.remove("invalid");
+    input.classList.add("valid");
+    errorElement.style.display = "none";
+    return true;
+  }
+
+  input.classList.remove("valid");
+  input.classList.add("invalid");
+  errorElement.style.display = "block";
+
+  if (input.validity.valueMissing) {
+    errorElement.textContent = "This field is required";
+  } else if (input.validity.typeMismatch) {
+    errorElement.textContent = "Please enter a valid email address";
+  } else if (input.validity.patternMismatch) {
+    if (input.type === "text") {
+      errorElement.textContent = "Name should only contain letters";
+    } else if (input.type === "email") {
+      errorElement.textContent = "Please enter a valid email address";
+    }
+  } else if (input.validity.tooShort) {
+    errorElement.textContent = `Minimum length is ${input.minLength} characters`;
+  } else if (input.validity.tooLong) {
+    errorElement.textContent = `Maximum length is ${input.maxLength} characters`;
+  }
+
+  return false;
+};
+
+// Add real-time validation on blur
+document.querySelectorAll(".contact__input").forEach((input) => {
+  input.addEventListener("blur", () => validateInput(input));
+  input.addEventListener("input", () => {
+    if (input.classList.contains("invalid")) {
+      validateInput(input);
+    }
+  });
+});
+
+const sendEmail = async (e) => {
+  e.preventDefault();
+
+  // Validate all fields before submission
+  let isValid = true;
+  document.querySelectorAll(".contact__input").forEach((input) => {
+    if (!validateInput(input)) {
+      isValid = false;
+    }
+  });
+
+  if (!isValid) {
+    contactMessage.textContent = "Please fix the errors before submitting";
+    contactMessage.style.color = "#ff3860";
+    setTimeout(() => {
+      contactMessage.textContent = "";
+    }, 5000);
+    return;
+  }
+
+  try {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<span class="loader"></span> Sending...';
+
+    const response = await emailjs.sendForm(
+      "service_v64xa24",
+      "template_6za1jaf",
+      "#contact-form",
+      "T-fZ9FCSQFulvDDRz"
+    );
+
+    contactMessage.textContent = "Message sent successfully ✅";
+    contactMessage.style.color = "#09c372";
+
+    // Reset form after success
+    setTimeout(() => {
+      contactMessage.textContent = "";
+      contactForm.reset();
+      document.querySelectorAll(".contact__input").forEach((input) => {
+        input.classList.remove("valid", "invalid");
+        input
+          .closest(".input-group")
+          .querySelector(".input-error").style.display = "none";
+      });
+    }, 5000);
+  } catch (error) {
+    contactMessage.textContent = "Message not sent (service error) ❌";
+    contactMessage.style.color = "#ff3860";
+    console.error("EmailJS Error:", error);
+  } finally {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    submitButton.disabled = false;
+    submitButton.textContent = "Send Message";
+  }
 };
 
 contactForm.addEventListener("submit", sendEmail);

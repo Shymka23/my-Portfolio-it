@@ -25,7 +25,7 @@
   <body>
     <!-- Добавляем контейнер для частиц -->
     <div id="particles-js"></div>
-      <!--==================== HEADER ====================-->
+    <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo"> Yevhen <span>Shymka</span> </a>
@@ -36,7 +36,7 @@
             </li>
 
             <li class="nav__item">
-              <a href="#about" class="nav__link ">About</a>
+              <a href="#about" class="nav__link">About</a>
             </li>
 
             <li class="nav__item">
@@ -72,16 +72,24 @@
             <div class="home__data">
               <h3 class="home__subtitle">Hello, <span>I’m</span></h3>
               <h1 class="home__title">Yevhen Shymka</h1>
-              <h3 class="home__education">Front-end Developer</h3>
+              <h3 class="home__education">Fullstack Developer</h3>
               <p class="home__description">
                 With knowledge in web development and design, I offer the best
                 projects resulting in quality work.
               </p>
               <a href="#contact" class="button">Let's Talk</a>
+              <a
+                href="./assets/pdf/Yevhen_Shymka_Fullstack_Developer.SV.pdf"
+                download
+                class="button button--flex button--ghost"
+              >
+                Download CV
+                <i class="ri-download-line button__icon"></i>
+              </a>
             </div>
             <div class="home__social">
               <a
-                href="https://github.com"
+                href="https://github.com/Shymka23"
                 target="_blank"
                 class="home__social-link"
               >
@@ -98,7 +106,7 @@
                 <i class="ri-discord-fill"></i>
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="www.linkedin.com/in/yevhen-shymka-1561b8343"
                 target="_blank"
                 class="home__social-link"
               >
@@ -182,9 +190,15 @@
             <h3 class="section__subtitle">My <span>Intro</span></h3>
             <h2 class="section_title">About Me</h2>
             <p class="about__description">
-              Frontend developer, I create web pages with UI / UX user
-              interface, I have years of experience and many clients are happy
-              with the projects carried out.
+              Full Stack Developer with expertise in JavaScript, React, Redux,
+              Node.js, and MongoDB. Experienced in building single-page
+              applications (SPAs), integrating RESTful APIs, and implementing
+              responsive and adaptive UI components. Skilled in Agile/Scrum
+              environments, adhering to best coding practices, version control
+              (Git), and performance optimization techniques. Strong
+              problem-solving abilities and a proactive approach to developing
+              scalable web solutions. Committed to writing clean, maintainable
+              code and delivering efficient, user-centric applications.
             </p>
             <a href="#contact" class="button">Contact Me</a>
           </div>
@@ -260,8 +274,8 @@
         </div>
       </section>
 
-     <!--==================== SKILLS ====================-->
- <section class="skills section">
+      <!--==================== SKILLS ====================-->
+      <section class="skills section">
         <div class="skills__container container grid">
           <div class="skills__data">
             <h3 class="section__subtitle">Favorite <span>Skills</span></h3>
@@ -278,141 +292,208 @@
               <li class="skills__item">JavaScript</li>
               <li class="skills__item">React.js</li>
               <li class="skills__item">Node.js</li>
-              
             </ol>
 
             <ol class="skills__group" start="5">
               <li class="skills__item">Git & GitHub</li>
               <li class="skills__item">Figma</li>
               <li class="skills__item">WebPack</li>
+              <li class="skills__item">Vue.js</li>
             </ol>
           </div>
         </div>
-      </section> 
+      </section>
 
       <!--==================== SERVICES ====================-->
       <section class="services section" id="services">
-        <h3 class="section__subtitle">My <span>Services</h3>
-          <h2 class="section__title">What I Do</h2>
-          <div class="services__container container grid">
-            
-            <article class="services__card">
-              <i class="ri-layout-3-line services__icon"></i>
-              <h2 class="services__title">Web Developer</h2>
-              <p class="services__description">Development of custom web pages. 
-Using current technologies and 
-libraries of the labor field.</p>
-            </article>
+        <h3 class="section__subtitle">My <span>Services </span></h3>
+        <h2 class="section__title">What I Do</h2>
+        <div class="services__container container grid">
+          <article class="services__card">
+            <i class="ri-code-line services__icon"></i>
+            <h2 class="services__title">Full-stack Development</h2>
+            <p class="services__description">
+              End-to-end web application development using modern JavaScript
+              stack: React for frontend and Node.js with Express for backend
+              solutions.
+            </p>
+          </article>
 
+          <article class="services__card">
+            <i class="ri-database-2-line services__icon"></i>
+            <h2 class="services__title">API & Database Architecture</h2>
+            <p class="services__description">
+              Building RESTful APIs and designing efficient database structures
+              with MongoDB and SQL for scalable applications.
+            </p>
+          </article>
 
-            <article class="services__card">
-              <i class="ri-pantone-line services__icon"></i>
-              <h2 class="services__title">UI/UX Designer</h2>
-              <p class="services__description">I offer design of web interfaces and 
-mobile applications, design made in 
-figma, adobe xd and sketch.</p>
-            </article>
-
-
-            <article class="services__card">
-              <i class="ri-pen-nib-line services__icon"></i>
-              <h2 class="services__title">Graphic Design</h2>
-              <p class="services__description">I make designs at the client's request, 
-                banner design, posters, digital 
-                designs among others.</p>
-            </article>
-          </div>
-
+          <article class="services__card">
+            <i class="ri-smartphone-line services__icon"></i>
+            <h2 class="services__title">Responsive Web Solutions</h2>
+            <p class="services__description">
+              Creating adaptive SPAs with pixel-perfect UI/UX implementation
+              that work flawlessly across all devices.
+            </p>
+          </article>
+        </div>
       </section>
 
       <!--==================== PROJECTS ====================-->
       <section class="projects section" id="projects">
-      <h3 class="section__subtitle">My <span>Jobs</span></h3>
-      <h2 class="section__title">Recent Projects</h2>
-      <div class="projects__container container grid">
+        <h3 class="section__subtitle">My <span>Jobs</span></h3>
+        <h2 class="section__title">Recent Projects</h2>
+        <div class="projects__container container grid">
+          <article class="projects__card">
+            <img
+              src="./assets/img/web_studio_project.jpg"
+              alt="projects image"
+              class="projects__img"
+            />
+            <div class="projects__modal">
+              <span class="projects__subtitle">Web</span>
+              <h2 class="projects__title">Modern website</h2>
+              <a
+                href="https://shymka23.github.io/goit-markup-hw-06/"
+                class="projects__button"
+              >
+                View demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </article>
 
-        <article class="projects__card">
-          <img src="./assets/img/web_studio_project.jpg" alt="projects image" class="projects__img">
-          <div class="projects__modal">
-            <span class="projects__subtitle">Web</span>
-            <h2 class="projects__title">Modern website</h2>
-            <a href="https://shymka23.github.io/goit-markup-hw-06/" class="projects__button">
-              View demo <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-        </article>
+          <article class="projects__card">
+            <img
+              src="./assets/img/harwest_project.jpg"
+              alt="projects image"
+              class="projects__img"
+            />
+            <div class="projects__modal">
+              <span class="projects__subtitle">Web</span>
+              <h2 class="projects__title">Modern website</h2>
+              <a
+                href="https://iryna-novikova.github.io/goit_markup_team_project/"
+                class="projects__button"
+              >
+                View demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </article>
 
-        <article class="projects__card">
-          <img src="./assets/img/harwest_project.jpg" alt="projects image" class="projects__img">
-          <div class="projects__modal">
-            <span class="projects__subtitle">Web</span>
-            <h2 class="projects__title">Modern website</h2>
-            <a href="https://iryna-novikova.github.io/goit_markup_team_project/" class="projects__button">
-              View demo <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-        </article>
+          <article class="projects__card">
+            <img
+              src="./assets/img/my_portfolio_project.jpg"
+              alt="projects image"
+              class="projects__img"
+            />
+            <div class="projects__modal">
+              <span class="projects__subtitle">Web</span>
+              <h2 class="projects__title">Portfolio</h2>
+              <a
+                href="https://shymka23.github.io/my-Portfolio-it/"
+                class="projects__button"
+              >
+                View demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </article>
 
-        <article class="projects__card">
-          <img src="./assets/img/my_portfolio_project.jpg" alt="projects image" class="projects__img">
-          <div class="projects__modal">
-            <span class="projects__subtitle">Web</span>
-            <h2 class="projects__title">Portfolio</h2>
-            <a href="https://shymka23.github.io/my-Portfolio-it/" class="projects__button">
-              View demo <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-        </article>
+          <article class="projects__card">
+            <img
+              src="./assets/img/project-img-4.jpg"
+              alt="projects image"
+              class="projects__img"
+            />
+            <div class="projects__modal">
+              <span class="projects__subtitle">Web</span>
+              <h2 class="projects__title">Modern website</h2>
+              <a href="" class="projects__button">
+                View demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </article>
 
-        <article class="projects__card">
-          <img src="./assets/img/project-img-4.jpg" alt="projects image" class="projects__img">
-          <div class="projects__modal">
-            <span class="projects__subtitle">Web</span>
-            <h2 class="projects__title">Modern website</h2>
-            <a href="" class="projects__button">
-              View demo <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-        </article>
+          <article class="projects__card">
+            <img
+              src="./assets/img/project-img-5.jpg"
+              alt="projects image"
+              class="projects__img"
+            />
+            <div class="projects__modal">
+              <span class="projects__subtitle">Web</span>
+              <h2 class="projects__title">Modern website</h2>
+              <a href="" class="projects__button">
+                View demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </article>
 
-        <article class="projects__card">
-          <img src="./assets/img/project-img-5.jpg" alt="projects image" class="projects__img">
-          <div class="projects__modal">
-            <span class="projects__subtitle">Web</span>
-            <h2 class="projects__title">Modern website</h2>
-            <a href="" class="projects__button">
-              View demo <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-        </article>
-
-        <article class="projects__card">
-          <img src="./assets/img/project-img-6.jpg" alt="projects image" class="projects__img">
-          <div class="projects__modal">
-            <span class="projects__subtitle">Web</span>
-            <h2 class="projects__title">Modern website</h2>
-            <a href="" class="projects__button">
-              View demo <i class="ri-external-link-line"></i>
-            </a>
-          </div>
-        </article>
-      </div>
+          <article class="projects__card">
+            <img
+              src="./assets/img/project-img-6.jpg"
+              alt="projects image"
+              class="projects__img"
+            />
+            <div class="projects__modal">
+              <span class="projects__subtitle">Web</span>
+              <h2 class="projects__title">Modern website</h2>
+              <a href="" class="projects__button">
+                View demo <i class="ri-external-link-line"></i>
+              </a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <!--==================== CONTACT ====================-->
+
       <section class="contact section" id="contact">
-        <h3 class="section__subtitle">
-          Get In <span>Touch</span>
-        </h3>
+        <h3 class="section__subtitle">Get In <span>Touch</span></h3>
         <h2 class="section__title">Contact Me</h2>
         <div class="contact__container container grid">
-          <form action="" class="contact__form" id="contact-form">
+          <form action="" class="contact__form" id="contact-form" novalidate>
             <div class="contact__group">
-              <input type="text" name="user_name" required placeholder="Enter your name"  class="contact__input">
-              <input type="text" name="user_email" required placeholder="Enter your email"  class="contact__input">
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="user_name"
+                  required
+                  placeholder=" "
+                  class="contact__input"
+                  pattern="[A-Za-z ]{2,}"
+                  minlength="2"
+                  maxlength="50"
+                />
+                <label for="user_name" class="input-label">Your Name</label>
+                <span class="input-error"></span>
+              </div>
+              <div class="input-group">
+                <input
+                  type="email"
+                  name="user_email"
+                  required
+                  placeholder=" "
+                  class="contact__input"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                />
+                <label for="user_email" class="input-label">Your Email</label>
+                <span class="input-error"></span>
+              </div>
             </div>
 
-            <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
+            <div class="input-group">
+              <textarea
+                name="user_project"
+                required
+                placeholder=" "
+                class="contact__input"
+                minlength="10"
+                maxlength="500"
+              ></textarea>
+              <label for="user_project" class="input-label">Your Message</label>
+              <span class="input-error"></span>
+            </div>
+
             <p class="contact__message" id="contact-message"></p>
             <button type="submit" class="button contact__button">
               Send Message
@@ -426,81 +507,91 @@ figma, adobe xd and sketch.</p>
     <footer class="footer">
       <div class="footer__container container grid">
         <div>
-          <h1 class="footer__title">
-            Yevhen <span>Shymka</span>
-          </h1>
-          <h2 class="footer__education">
-            Front-end Developer  
-          </h2>
+          <h1 class="footer__title">Yevhen <span>Shymka</span></h1>
+          <h2 class="footer__education">Full-stack Developer</h2>
         </div>
         <div class="footer__social">
-          <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="footer__social-link"
+          >
             <i class="ri-facebook-circle-fill"></i>
           </a>
-          <a href="https://telegram.com/" target="_blank" class="footer__social-link">
-           <i class="ri-telegram-line"></i>
+          <a
+            href="https://t.me/Shym_Evg"
+            target="_blank"
+            class="footer__social-link"
+          >
+            <i class="ri-telegram-line"></i>
           </a>
 
-          <a href="https://instagram.com/" target="_blank" class="footer__social-link">
-           <i class="ri-instagram-line"></i>
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            class="footer__social-link"
+          >
+            <i class="ri-instagram-line"></i>
           </a>
 
-          <a href="https://whatsapp.com/" target="_blank" class="footer__social-link">
+          <a
+            href="https://whatsapp.com/"
+            target="_blank"
+            class="footer__social-link"
+          >
             <i class="ri-whatsapp-line"></i>
           </a>
-
-
         </div>
         <span class="footer__copy">
-          &#169; Copyright Bedimcode. All rights reserved
+          &#169; Copyright Yevhen_Shymka. All rights reserved
         </span>
       </div>
     </footer>
     <!--========== SCROLL UP ==========-->
     <a href="#" class="scrollup" id="scroll-up">
- <i class="ri-arrow-up-double-line"></i>
+      <i class="ri-arrow-up-double-line"></i>
     </a>
 
     <!--=============== SCROLL REVEAL ===============-->
     <script src="./assets/js/scrollreveal.min.js"></script>
 
     <!--=============== EMAIL JS ===============-->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
     <!-- Подключаем библиотеку particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
       // Инициализация частиц
-      particlesJS('particles-js', {
+      particlesJS("particles-js", {
         particles: {
           number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: '#2ca87f' },
-          shape: { type: 'circle' },
+          color: { value: "#2ca87f" },
+          shape: { type: "circle" },
           opacity: { value: 0.5 },
           size: { value: 3 },
           move: {
             enable: true,
             speed: 2,
-            direction: 'none',
+            direction: "none",
             random: false,
             straight: false,
-            out_mode: 'out',
-            bounce: false
-          }
+            out_mode: "out",
+            bounce: false,
+          },
         },
         interactivity: {
-          detect_on: 'canvas',
+          detect_on: "canvas",
           events: {
-            onhover: { enable: true, mode: 'repulse' },
-            onclick: { enable: true, mode: 'push' },
-            resize: true
-          }
-        }
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+        },
       });
     </script>
     <!--=============== CUSTOM CURSOR ===============-->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
   </body>
 </html>
